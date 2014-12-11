@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Time Actuator - Steampunk Clock</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+    
+    <style type="text/css">
+        * {
+        	margin: 0;
+        	padding: 0;
+        }
+        
+        #clock {
+        	position: relative;
+        	width: 300px;
+        	height: 300px;
+        	margin: 10px auto 0 auto;
+        	background: url(images/clockface-alt.png);
+        	list-style: none;
+		z-index: 1000;
+        	}
+        
+        #sec, #min, #hour {
+        	position: absolute;
+        	width: 15px;
+        	height: 300px;
+        	top: 0px;
+        	left: 142px;
+        	}
+        
+        #sec {
+        	background: url(images/sechand.png);
+        	z-index: 3;
+           	}
+           
+        #min {
+        	background: url(images/minhand.png);
+        	z-index: 2;
+           	}
+           
+        #hour {
+        	background: url(images/hourhand.png);
+        	z-index: 1;
+           	}
+           	
+        p {
+            text-align: center; 
+            padding: 10px 0 0 0;
+            }
+
+	.extra {
+		position: relative;
+		z-index: 1030;
+	}
+    </style>
+    
+    <script type="text/javascript">
+    
+        $(document).ready(function() {
+         
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $("#sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+              
+         
+              setInterval( function() {
+              var hours = new Date().getHours();
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $("#hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $("#min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+         
+        }); 
+    
+    </script>
+
+</head>
+
+<body>
+
+	<ul id="clock" style="margin-top:75px;">	
+	   	<li id="sec"></li>
+	   	<li id="hour"></li>
+		<li id="min"></li>
+	</ul>
+	<div id="level">
+		<div id="content">
+			<div id="gears">
+				<div id="gears-static"></div>
+				<div id="gear-system-1">
+					<div class="shadow" id="shadow15"></div>
+					<div id="gear15"></div>
+					<div class="shadow" id="shadow14"></div>
+					<div id="gear14"></div>
+					<div class="shadow" id="shadow13"></div>
+					<div id="gear13"></div>
+				</div>
+				<div id="gear-system-2">
+					<div class="shadow" id="shadow10"></div>
+					<div id="gear10"></div>
+					<div class="shadow" id="shadow3"></div>
+					<div id="gear3"></div>
+				</div>
+				<div id="gear-system-3">
+					<div class="shadow" id="shadow9"></div>
+					<div id="gear9"></div>
+					<div class="shadow" id="shadow7"></div>
+					<div id="gear7"></div>
+				</div>
+				<div id="gear-system-4">
+					<div class="shadow" id="shadow6"></div>
+					<div id="gear6"></div>
+					<div id="gear4"></div>
+				</div>
+				<div id="gear-system-5">
+					<div class="shadow" id="shadow12"></div>
+					<div id="gear12"></div>
+					<div class="shadow" id="shadow11"></div>
+					<div id="gear11"></div>
+					<div class="shadow" id="shadow8"></div>
+					<div id="gear8"></div>
+				</div>
+				<div class="shadow" id="shadow1"></div>
+				<div id="gear1"></div>
+				<div id="gear-system-6">
+					<div class="shadow" id="shadow5"></div>
+					<div id="gear5"></div>
+					<div id="gear2"></div>
+				</div>
+				<div class="shadow" id="shadowweight"></div>
+				<div id="chain-circle"></div>
+				<div id="chain"></div>
+				<div id="weight"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
