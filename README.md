@@ -8,4 +8,6 @@ http://sonarpos.deviantart.com/art/gears-style-336001675 (For the text, gear, an
 
 http://freepsdfiles.net/backgrounds/7-vintage-backgrounds (For the background and loading image.)
 
-Copyright belongs to the original authors of these files and code. Everything was put together as an app by NewStarApps.com, with additional website design by HostArmor.com
+http://iconshock.com/web-icons.php (For the icon.)
+
+Copyright belongs to the original authors of these files and code. Everything was put together as an app by www.NewStarApps.com, with additional website design by www.HostArmor.com
